@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Custom boss bar UI",
+    "description": "カスタムボスバーをscoreboardのsidebarで作れます。\n/scoreboard objectives add <ID> dummy",
+    "version": [ 1, 0, 0 ],
+    "uuid": "17565b7e-d4c4-40cc-bb20-0f9590be1707",
+    "min_engine_version": [ 1, 13, 0 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "description": "",
+      "version": [ 1, 0, 0 ],
+      "uuid": "5160e72c-238b-4193-9d38-fa58344720ed"
+    }
+  ]
+}

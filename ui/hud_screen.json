@@ -1,0 +1,149 @@
+{
+  "namespace": "hud",
+
+  "boss_health_panel_score": {
+    "type": "panel",
+    "size": [ 182, 20 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$progress_bar_collection": "scoreboard_scores",
+    "controls": [
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 0, 10 ]
+        }
+      },
+      {
+        "progress_bar_for_collections@common.progress_bar": {
+          "offset": [ 0, 10 ],
+          "controls": [
+            {
+              "empty_progress_bar@common.empty_progress_bar": {
+                "layer": 1
+              }
+            },
+            {
+              "filled_progress_bar@common.filled_progress_bar": {
+                "layer": 2,
+                "clip_pixelperfect": false,
+                "color": [ 1, 0, 1 ],
+
+                // 最大値を設定する際は、必ず .0 を付けてください。 例: 50.0, 1000.0
+                // When setting the maximum value, be sure to add ".0". Example: 50.0, 1000.0
+                "$bossbar_max_value": 100.0,
+                "bindings": [
+                  {
+                    "binding_name": "#objective_sidebar_name",
+                    "binding_type": "global"
+                  },
+                  {
+                    "binding_name": "#player_score_sidebar",
+                    "binding_type": "collection",
+                    "binding_collection_name": "scoreboard_scores"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(1 - ((#player_score_sidebar * 1) / $bossbar_max_value))",
+                    "target_property_name": "#clip_ratio"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "boss_health_panel_player": {
+    "type": "panel",
+    "size": [ 182, 20 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$progress_bar_collection": "scoreboard_scores",
+    "controls": [
+      {
+        "boss_name@boss_name_panel": {}
+      }
+    ]
+  },
+
+  "root_panel/sidebar": {
+    "ignored": true
+  },
+
+  "root_panel/boss_health_panel/boss_hud_panel": {
+    "controls": [
+      {
+        "boss_health_grid_name@hud.boss_health_grid_scoreboard_name": {
+          "offset": [ 0, 2 ]
+        }
+      },
+      {
+        "boss_health_grid_score@hud.boss_health_grid_scoreboard_score": {
+          "offset": [ 0, 2 ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_visible",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "boss_health_grid_scoreboard_score": {
+    "type": "stack_panel",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "size": [ 182, "30%" ],
+    "collection_name": "scoreboard_scores",
+
+    "factory": {
+      "name": "player_score_factory",
+      "control_name": "hud.boss_health_panel_score"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "boss_health_grid_scoreboard_name": {
+    "type": "stack_panel",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "size": [ 182, "30%" ],
+    "collection_name": "scoreboard_players",
+
+    "factory": {
+      "name": "player_score_factory",
+      "control_name": "hud.boss_health_panel_player"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  
+  "boss_name_panel/boss_name": {
+    "size": [ "default", 10 ],
+    "text": "#player_name_sidebar",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      }
+    ]
+  }
+}
