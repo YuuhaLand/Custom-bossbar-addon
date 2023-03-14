@@ -4,7 +4,7 @@ This addon allows you to create your own bossbar !!!
 > ⚠Caution.  
 > Using this addon, you will not be able to use vanilla bossbar or scoreboard sidebar.
 
-★日本語版のREADMEを見る場合はここからどうぞ: [README.md](https://github.com/Gotemba912/Custom-bossbar-addon/README.md)
+★日本語版のREADMEを見る場合はここからどうぞ: [README.md](https://github.com/Gotemba912/Custom-bossbar-addon/blob/main/README.md)
 
 # How to use
 After applying the resource pack to your world, run the following command to create an objective.  
@@ -53,7 +53,7 @@ You are free to incorporate this pack into your own packs.
 However, you must indicate that it was copied from this pack!
 
 # License
-[Licence.txt](https://github.com/Gotemba912/Custom-bossbar-addon/Licence.txt)
+[Licence.txt](https://github.com/Gotemba912/Custom-bossbar-addon/blob/main/Licence.txt)
 
 # Creator
 @Gotemba912 (YukaYama0311)

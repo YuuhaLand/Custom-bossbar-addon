@@ -4,7 +4,7 @@
 > ⚠注意  
 > このアドオンを使用すると、バニラのボスバーやscoreboardのsidebarが使えなくなります。
 
-★To view the English version of the README, please click here: [README_en.md](https://github.com/Gotemba912/Custom-bossbar-addon/README_en.md)
+★To view the English version of the README, please click here: [README_en.md](https://github.com/Gotemba912/Custom-bossbar-addon/blob/main/README_en.md)
 
 # 使い方
 リソースパックをワールドに適用したら、以下のコマンドを実行してobjectiveを作成してください。  
@@ -53,7 +53,7 @@ objectiveに任意の値を入れてみてください。
 ただし、このパックからコピーされたことを表記する必要があります!
 
 # ライセンス
-[Licence.txt](https://github.com/Gotemba912/Custom-bossbar-addon/Licence.txt)
+[Licence.txt](https://github.com/Gotemba912/Custom-bossbar-addon/blob/main/Licence.txt)
 
 # 製作者
 @Gotemba912 (YukaYama0311)
